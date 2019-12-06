@@ -67,7 +67,8 @@ h2, table{
   height: 50px;
 }
 #par{
-  color: #2df026;
+	width : 200;
+  color: #329c4e;
   text-align: center;
 }
 #gry{
