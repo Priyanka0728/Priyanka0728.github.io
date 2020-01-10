@@ -15,7 +15,7 @@
 		href="ShowMenuItemListCustomer">Menu</a> </header>
 
 	<div class="cont">
-		<h4>Cart</h4>
+		<h2>Cart</h2>
 		<table class="table">
 			<h2>
 				<p id="par">${msg}</p>
