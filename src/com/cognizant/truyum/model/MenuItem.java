@@ -12,8 +12,7 @@ public class MenuItem {
 	private String category;
 	private boolean freeDelivery;
 
-	public MenuItem(long id, String name, float price, boolean active, Date dateOfLaunch, String category,
-			boolean freeDelivery) {
+	public MenuItem(long id, String name, float price, boolean active, Date dateOfLaunch, String category, boolean freeDelivery) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -22,6 +21,10 @@ public class MenuItem {
 		this.dateOfLaunch = dateOfLaunch;
 		this.category = category;
 		this.freeDelivery = freeDelivery;
+	}
+
+	public MenuItem() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public long getId() {

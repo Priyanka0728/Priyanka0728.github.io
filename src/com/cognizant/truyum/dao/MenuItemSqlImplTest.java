@@ -6,7 +6,7 @@ import java.util.List;
 import com.cognizant.truyum.model.MenuItem;
 import com.cognizant.truyum.util.DateUtil;
 
-public class MenuItemDaoCollectionImplTest {
+public class MenuItemSqlImplTest {
 
 	public static void main(String[] args) {
 		try {
@@ -23,7 +23,7 @@ public class MenuItemDaoCollectionImplTest {
 	}
 
 	public static void testGetMenuItemListAdmin() throws ParseException {
-		MenuItemDao menuItemDao = new MenuItemDaoCollectionImpl();
+		MenuItemDao menuItemDao = new MenuItemDaoSqlImpl();
 		List<MenuItem> menuItemList = menuItemDao.getMenuItemListAdmin();
 		for (MenuItem x : menuItemList) {
 			System.out.println(x);
@@ -31,7 +31,7 @@ public class MenuItemDaoCollectionImplTest {
 	}
 
 	public static void testGetMenuItemListCustomer() throws ParseException {
-		MenuItemDao menuItemDao = new MenuItemDaoCollectionImpl();
+		MenuItemDao menuItemDao = new MenuItemDaoSqlImpl();
 		List<MenuItem> customerList = menuItemDao.getMenuItemListCustomer();
 		for (MenuItem x : customerList) {
 			System.out.println(x);
@@ -40,9 +40,11 @@ public class MenuItemDaoCollectionImplTest {
 
 	private static void testModifyMenuItem() throws ParseException {
 
-		MenuItemDao menuItemDao = new MenuItemDaoCollectionImpl();
-		MenuItem menuItem = new MenuItem(1, "Noodles", 50.0f, false, DateUtil.convertToDate("17/08/2019"), "Special",false);
-		menuItemDao.modifyMenuItem(menuItem);
+		MenuItem m = new MenuItem(1, "veg fry",100.00f,true, DateUtil.convertToDate("20/12/2022"), "Starters",true);
+       MenuItemDao menuItemDao = new MenuItemDaoSqlImpl();
+       menuItemDao.modifyMenuItem(m);
+}
+
 		
 	}
-}
+
